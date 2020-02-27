@@ -1,2 +1,2 @@
 # chat-room
-full stack assignment
+full stack assignment By Ayusha Chaudry & Beatriz Morales

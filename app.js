@@ -2,7 +2,7 @@ let express = require("express");
 (path = require("path")),
   (mongoose = require("mongoose")),
   (bodyParser = require("body-parser")),
-  (dataBaseConfig = require("./database/db"));
+  (dataBaseConfig = require("./db"));
 
 mongoose.Promise = global.Promise;
 mongoose
@@ -14,7 +14,7 @@ mongoose
       console.log("Database connected sucessfully ");
     },
     error => {
-      console.log("Could not connected to database : " + error);
+      console.log("Could not be connected to database : " + error);
     }
   );
 

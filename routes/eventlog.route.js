@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const eventlogRoute = express.Router();
 
-let Eventlog = require("../database/model/eventlog");
+let Eventlog = require("../model/eventlog");
 
 eventlogRoute.route("/").get((req, res) => {
   Eventlog.find((error, data) => {

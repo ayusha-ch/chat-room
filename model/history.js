@@ -15,6 +15,9 @@ let History = new Schema(
 
     chat_room: {
       type: String
+    },
+    message: {
+      type: String
     }
   },
   {

@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const historyRoute = express.Router();
 
-let History = require("../database/model/history");
+let History = require("../model/history");
 
 historyRoute.route("/history").get((req, res, next) => {
   History.find((error, data) => {

@@ -23,7 +23,7 @@ historyRoute.route("/roomhistory").post((req, res, next) => {
   });
 });
 
-historyRoute.route("/history").post((req, res, next) => {
+historyRoute.route("/addhistory").post((req, res, next) => {
   History.create(req.body, (error, historyDoc) => {
     if (error) {
       return next(error);

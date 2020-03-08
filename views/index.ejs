@@ -1,41 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
-    <link
-      href="http://fonts.googleapis.com/css?family=Comfortaa"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
-    <title>Socket.io chat app</title>
-  </head>
+    <head>
+        <meta http-equiv="Content-Type" const="text/html;charset=UTF-8" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <link
+            href="http://fonts.googleapis.com/css?family=Comfortaa"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <title>Socket.io chat app</title>
+    </head>
 
-  <body>
-    <header>
-      <h1>Socket io chat app</h1>
-    </header>
-
-    <section>
-      <div id="change_username">
-        <input id="username" type="text" />
-        <button id="send_username" type="button">Change username</button>
-      </div>
-    </section>
-
-    <section id="chatroom">
-      <section id="feedback"></section>
-    </section>
-
-    <section id="input_zone">
-      <input id="message" class="vertical-align" type="text" />
-      <button id="send_message" class="vertical-align" type="button">
-        Send
-      </button>
-    </section>
-
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="chat.js"></script>
-  </body>
+    <body>
+        <div class="container">
+            <header class="row">
+                <h1>Socket io chat app</h1>
+            </header>
+            <section class="row">
+                <div id="change_username" class="col">
+                    <input id="username" type="text" />
+                    <button id="send_username" type="button">
+                        Change username
+                    </button>
+                </div>
+            </section>
+            <div class="btn-group row" role="group" aria-label="Basic example">
+                <button
+                    type="button"
+                    class="btn btn-secondary room-button"
+                    value="room1"
+                >
+                    Room 1
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-secondary room-button"
+                    value="room2"
+                >
+                    Room 2
+                </button>
+                <button
+                    type="button"
+                    class="btn btn-secondary room-button"
+                    value="room3"
+                >
+                    Room 3
+                </button>
+            </div>
+            <div class="row">
+                <section id="room1" class="col d-block room-section">
+                    <section class="feedback"></section>
+                </section>
+                <section id="room2" class="col d-none room-section">
+                    <section class="feedback"></section>
+                </section>
+                <section id="room3" class="col d-none room-section">
+                    <section class="feedback"></section>
+                </section>
+            </div>
+            <section id="input_zone" class="row">
+                <div class="col">
+                    <input id="message" class="vertical-align" type="text" />
+                    <button
+                        id="send_message"
+                        class="vertical-align"
+                        type="button"
+                    >
+                        Send
+                    </button>
+                </div>
+            </section>
+        </div>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="chat.js"></script>
+    </body>
 </html>

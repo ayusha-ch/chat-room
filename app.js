@@ -3,9 +3,6 @@ let express = require("express");
     (mongoose = require("mongoose")),
     (bodyParser = require("body-parser")),
     (dataBaseConfig = require("./db"));
-const http = require("http");
-const got = require("got");
-const FormData = require("form-data");
 const cors = require("cors");
 mongoose.Promise = global.Promise;
 mongoose

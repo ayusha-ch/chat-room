@@ -13,7 +13,7 @@
             rel="stylesheet"
             type="text/css"
         />
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
         <title>Socket.io chat app</title>
     </head>
@@ -75,6 +75,58 @@
                     >
                         Send
                     </button>
+                </div>
+            </section>
+            <section class="row">
+                <div class="col">
+                    <button id="event_log">Event log</button>
+                    <table class="d-none" data-table="event_log">
+                        <caption>
+                            Event log
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">User</th>
+                                <th scope="col">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="col">
+                    <button id="room_history">Room chat history</button>
+                    <table class="d-none" data-table="room_history">
+                        <caption>
+                            Room chat history
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Sender</th>
+                                <th scope="col">Chat Room</th>
+                                <th scope="col">Message</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div class="col">
+                    <button id="all_history">All chat history</button>
+                    <table class="d-none" data-table="all_history">
+                        <caption>
+                            All chat history
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Date</th>
+                                <th scope="col">Sender</th>
+                                <th scope="col">Chat Room</th>
+                                <th scope="col">Message</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
             </section>
         </div>

@@ -4,7 +4,7 @@ const eventlogRoute = express.Router();
 
 let Eventlog = require("../model/eventlog");
 
-eventlogRoute.route("/").get((req, res) => {
+eventlogRoute.route("/").get((req, res, next) => {
     Eventlog.find((error, data) => {
         if (error) {
             return next(error);

@@ -6,9 +6,9 @@ let History = new Schema(
         sender: {
             type: String
         },
-        receiver: {
+        /* receiver: {
             type: String
-        },
+        }, */
         date: {
             type: Date
         },

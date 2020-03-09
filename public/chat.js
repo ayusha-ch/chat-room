@@ -8,7 +8,6 @@ $(function() {
   var username = $("#username");
   var send_message = $("#send_message");
   var send_username = $("#send_username");
-  // var chatroom = $("#chatroom");
   const roomButton = $(".room-button");
   const eventLogButton = $("#event_log");
   const roomHistoryButton = $("#room_history");
@@ -158,6 +157,23 @@ $(function() {
       allChatTable.find("tbody").empty();
       data.forEach(row => {
         allChatTable
+          .find("tbody")
+          .append(
+            `<tr><td>${row.sender}</td><td>${row.date}</td><td>${row.chat_room}</td><td>${row.message}</tr>`
+          );
+      });
+    });
+  });
+  roomHistoryButton.on("click", event => {
+    event.preventDefault();
+    const roomChatHistTable = $(
+      `[data-table="${event.currentTarget.getAttribute("id")}"]`
+    );
+    roomChatHistTable.removeClass("d-none");
+    getFromDatabase("/roomhistory").then(data => {
+      roomChatHistTable.find("tbody").empty();
+      data.forEach(row => {
+        roomChatHistTable
           .find("tbody")
           .append(
             `<tr><td>${row.sender}</td><td>${row.date}</td><td>${row.chat_room}</td><td>${row.message}</tr>`
